@@ -13,11 +13,13 @@ class Board
 		// class destructor
 		~Board();
 		// creating a cell
-		create_cell(int id,int xpos, int ypos);
+		move_by_id(blip* someBlip, int newX, int newY);
 		// moving a cell
-		cell_move(ind xpos1, int ypos1, int xpos2, int ypos2);
+		move_by_loc(ind curX, int curY, int newX, int newY);
 		// print the grid
 		print_map();
+		
+		blip * grid[][];
 		
 		
 };
