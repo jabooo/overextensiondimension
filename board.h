@@ -1,7 +1,10 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-
+//THIS IS A COMMENT FUCKER
+/*
+GET USED TO IT
+*/
 class Board
 {
 	public:
