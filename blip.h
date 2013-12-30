@@ -9,28 +9,26 @@
 class Blip
 {
 	public:
-        int id
-        int xloc
-        int yloc
+        int id;
+        int xloc;
+        int yloc;
         
-		// class constructor
-		Blip(int startx, int starty);
-		// class destructor
-		~Blip();
-		// move blip
-		move_Blip(int xloc2, int yloc2)
+	// class constructor
+	Blip(int startx, int starty);
+	// class destructor
+	~Blip();
+	// Change internal blip location
+	move(int newX, int newY)
 		
 };
 
 class Cell : class Blip
 {
-    public:
-		// class constructor
-		Cell();
-		// class destructor
-		~Cell();
-		
-		
+    	public:
+	// class constructor
+	Cell();
+	// class destructor
+	~Cell();
 };
 
 
