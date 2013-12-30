@@ -1,22 +1,24 @@
 #include "board.h" // class's header file
 
+// creating grid
+   Blip * grid [1] [1];
 // class constructor
 Board::Board(int h, int w)
 {
-	int grid [h] [w];
+	grid = Blip* [h] [w];
 }
 
-// creating a cell
-Board::create_cell(int id,int xpos, int ypos);
+// creating a blip
+Board::create_blip(int id,int xpos, int ypos);
 {
-    grid [ypos] [xpos] = id                          
+    grid [xpos] [ypos] = blip(id,xpos,ypos);                          
 }
 
 // moving a cell
 Board::cell_move(ind xpos1, int ypos1, int xpos2, int ypos2);
 {
     private int temp = grid [ypos1] [xpos1];
-    grid [ypos2] [xpos2] = temp                    
+    grid [xpos2] [ypos2] = temp;                    
 }
 
 // class destructor
