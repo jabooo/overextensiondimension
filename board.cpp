@@ -1,7 +1,5 @@
 #include "board.h" // class's header file
 
-// creating grid
-   Blip * grid [1] [1];
 // class constructor
 Board::Board(int h, int w)
 {
@@ -14,11 +12,19 @@ Board::create_blip(int id,int xpos, int ypos);
     grid [xpos] [ypos] = blip(id,xpos,ypos);                          
 }
 
-// moving a cell
-Board::cell_move(ind xpos1, int ypos1, int xpos2, int ypos2);
+// Move a particle by its pointer id
+Board::move_by_id(blip* someBlip, int newX, int newY);
 {
-    private int temp = grid [ypos1] [xpos1];
-    grid [xpos2] [ypos2] = temp;                    
+	grid[someBlip->x][someBlip->y] = NULL;
+	grid[newX][newY] = someBlip;
+}
+
+// Move a particle by its coordinates
+Board::move_by_loc(int curX, int curY, int newX, int newY)
+{
+	blip * workingBlip = grid [curX] [curY];
+	grid [curX] [curY] = NULL;
+    	grid [newX] [newY] = workingBlip;         
 }
 
 // class destructor
